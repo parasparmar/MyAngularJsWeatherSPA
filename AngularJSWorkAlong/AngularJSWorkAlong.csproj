@@ -69,9 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.js" />
+    <Content Include="controllers.js" />
+    <Content Include="directives.js" />
     <Content Include="index.html" />
     <Content Include="pages\forecast.html" />
     <Content Include="pages\home.html" />
+    <Content Include="services.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

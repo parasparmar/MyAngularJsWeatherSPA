@@ -19,40 +19,35 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h1 class="panel-title">FORECAST FOR {{city}}</h1>
-                </div>
-                <div class="panel-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped table-condensed">
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Temp</th>
-                                    <th>Feels Like</th>
-                                    <th>Daily Range</th>
-                                    <th>Atmospheric Pressure</th>
-                                    <th>humidity</th>
-                                    <th>Weather Mostly</th>
-                                    <th>Weather Specifically</th>
-                                    <th>Weather Icon</th>                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr ng-repeat="w in weatherResult.list">
-                                    <td>{{ convertToDate(w.dt)|date:'d-MMM-yyyy hh:mm a' }}</td>
-                                    <td>{{w.main.temp}}</td>
-                                    <td>{{w.main.feels_like}}</td>
-                                    <td>{{w.main.temp_min}} to {{w.main.temp_max}}</td>
-                                    <td>{{w.main.pressure}}</td>
-                                    <td>{{w.main.humidity}}</td>                                    
-                                    <td>{{w.weather[0].main}}</td>
-                                    <td>{{w.weather[0].description}}</td>
-                                    <td><img src="{{getWeatherIconUrl(w.weather[0].icon)}}" alt="{{w.weather[0].description}}" /></td>                                    
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Temp</th>
+                                <th>Feels Like</th>
+                                <th>Daily Range</th>
+                                <th>Atmospheric Pressure</th>
+                                <th>humidity</th>
+                                <th>Weather Mostly</th>
+                                <th>Weather Specifically</th>
+                                <th>Weather Icon</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="w in weatherResult.list">
+                                <td>{{ convertToDate(w.dt)|date:'d-MMM-yyyy hh:mm a' }}</td>
+                                <td>{{w.main.temp}}</td>
+                                <td>{{w.main.feels_like}}</td>
+                                <td>{{w.main.temp_min}} to {{w.main.temp_max}}</td>
+                                <td>{{w.main.pressure}}</td>
+                                <td>{{w.main.humidity}}</td>
+                                <td>{{w.weather[0].main}}</td>
+                                <td>{{w.weather[0].description}}</td>
+                                <td><img src="{{getWeatherIconUrl(w.weather[0].icon)}}" alt="{{w.weather[0].description}}" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
