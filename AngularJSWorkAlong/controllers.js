@@ -31,5 +31,5 @@ weatherApp.controller('forecastController',
             $scope.convertToDate = function (dt) {
                 return new Date(dt * 1000);
             }
-            console.log($scope.weatherResult);
+            //console.log($scope.weatherResult);
         }]);

@@ -13,8 +13,3 @@ weatherApp.config(function ($routeProvider) {
             controller: 'forecastController'
         })
 });
-
-
-
-
-
